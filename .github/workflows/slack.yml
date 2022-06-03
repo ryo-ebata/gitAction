@@ -5,6 +5,11 @@ on:
     paths:
       - "index.html"
 
+env:
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+  SLACK_USERNAME: Composer-Install
+  SLACK_ICON: https://example.com/image/icon_bot.png
+
 jobs:
   slack:
     # Ubuntu
@@ -13,7 +18,8 @@ jobs:
       # Slack
       - name: Slack Notification
         uses: tokorom/action-slack-incoming-webhook@main
-        env:
-          INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        #env:
+        # INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          text: "@ebata_ryou ⚠️composer.jsonが更新されました！⚠️"
+          channel: <@ebata_ryou>
+          text: "⚠️composer.jsonが更新されました！⚠️"
