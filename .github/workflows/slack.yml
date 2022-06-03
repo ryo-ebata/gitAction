@@ -5,6 +5,10 @@ on:
     paths:
       - "index.html"
 
+env:
+  SLACK_USERNAME: Composer-Install
+  SLACK_ICON: https://example.com/image/icon_bot.png
+
 jobs:
   slack:
     # Ubuntu
@@ -16,5 +20,4 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          channel: <@ebata_ryou>
           text: "⚠️composer.jsonが更新されました！⚠️"
