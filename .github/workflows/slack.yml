@@ -17,5 +17,5 @@ jobs:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           icon-url: https://example.com/image/icon_bot.png
-          run-id: <@ebata_ryou>
+          run-id: "@ebata_ryou"
           text: "⚠️composer.jsonが更新されました！⚠️"
