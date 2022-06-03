@@ -20,4 +20,4 @@ jobs:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           mention: '@ebata_ryou'
-          text: ":warning:composer.jsonが更新されました！:warning:"
+          text: "<@ebata_ryou> :warning:composer.jsonが更新されました！:warning:"
