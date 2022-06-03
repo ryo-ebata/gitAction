@@ -1,22 +1,22 @@
-name: Slack
-uses: 8398a7/action-slack@v3.8.0
+- name: Slack
+  uses: 8398a7/action-slack@v3.8.0
 
-on: 
-  push:
-    paths:
-      - "index.html"
+  on: 
+    push:
+      paths:
+        - "index.html"
 
-jobs:
-  slack:
-    # Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-      # Slack
-      - name: Slack Notification
-        uses: tokorom/action-slack-incoming-webhook@main
-        env:
-          INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        with:
-          icon-url: https://example.com/image/icon_bot.png
-          mention: "ebata_ryou"
-          text: "TEST"
+  jobs:
+    slack:
+      # Ubuntu
+      runs-on: ubuntu-latest
+      steps:
+        # Slack
+        - name: Slack Notification
+          uses: tokorom/action-slack-incoming-webhook@main
+          env:
+            INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          with:
+            icon-url: https://example.com/image/icon_bot.png
+            mention: "ebata_ryou"
+            text: "TEST"
