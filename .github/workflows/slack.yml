@@ -17,6 +17,5 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          icon-url: https://example.com/image/icon_bot.png
           mention: "<@ebata_ryou>"
           text: ":warning:composer.jsonが更新されました！:warning:"
